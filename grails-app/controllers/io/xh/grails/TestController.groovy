@@ -36,16 +36,16 @@ class TestController {
     }
 
 
-    /** Does not trigger n+1 - single query to get all data */
+    /** Does not trigger n+1 - single query to get all data (but would need to test with additional joins or collections - could dupe results) */
     def findAllWithHql() {
         Collection<Flight> flights
         withLog('Find all flights with SQL') {
-            flights = flights = Flight.findAll("from Flight as flight left join fetch flight.destination")
+            flights = Flight.findAll("from Flight as flight left join fetch flight.destination")
         }
         renderWithCities(flights)
     }
 
-    /** Does not trigger n+1 - one query to get locations, another to get flights, no location queries */
+    /** Does not trigger n+1 - one query to get all locations, another to get flights, no n+1 location queries */
     def findAllWithLocationPrefetch() {
         withLog('Find all locations, before flights') {
             Location.findAll()
