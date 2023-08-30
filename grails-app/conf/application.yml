@@ -1,6 +1,6 @@
 info:
   app:
-    name: grailsSixZeroZero
+    name: xhGrailsTest
     version: '0.1'
     grailsVersion: 6.0.0
 grails:
@@ -58,7 +58,7 @@ dataSource:
   pooled: true
   jmxExport: true
 hibernate:
-  show_sql: true
+  show_sql: false
   hbm2ddl:
     auto: update
   cache:

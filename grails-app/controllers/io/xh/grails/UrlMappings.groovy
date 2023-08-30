@@ -1,4 +1,4 @@
-package grailsSixZeroZero
+package io.xh.grails
 
 class UrlMappings {
     static mappings = {

@@ -1,17 +1,17 @@
 plugins {
-    id "groovy" 
-    id "org.grails.grails-web" 
-    id "org.grails.grails-gsp" 
+    id "groovy"
+    id "org.grails.grails-web"
+    id "org.grails.grails-gsp"
     id "com.github.erdi.webdriver-binaries" version "3.0"
-    id "war" 
-    id "idea" 
-    id "com.bertramlabs.asset-pipeline" 
-    id "application" 
-    id "eclipse" 
+    id "war"
+    id "idea"
+    id "com.bertramlabs.asset-pipeline"
+    id "application"
+    id "eclipse"
 }
 
 version "0.1"
-group = "grailsSixZeroZero"
+group = "io.xh.grails"
 
 repositories {
     mavenCentral()
@@ -73,11 +73,11 @@ dependencies {
 }
 
 application {
-    mainClass.set("grailsSixZeroZero.Application")
+    mainClass.set("io.xh.grails.Application")
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion("11")
+    sourceCompatibility = JavaVersion.toVersion("17")
 }
 
 tasks.withType(Test) {
